@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Muhammad Afeef Imran",
+      "lastName": "Mughal",
+      "email": "afeefimran2@gmail.com",
+      "dob": "2016-06-12T22:00:00.000Z",
+      "password": "VTJGc2RHVmtYMTh6cGl0ZXgyZGd6aW1STDh1Nyt6QjA4SG5PcnoyK01Ecz0=",
+      "gender": "male",
+      "category": "School",
+      "app": "gmail",
+      "id": 1
+    },
+    {
+      "firstName": "abdullah",
+      "lastName": "rao",
+      "email": "rao@outlook.com",
+      "dob": "1993-02-15T23:00:00.000Z",
+      "password": "VTJGc2RHVmtYMThVTStTNzIyRDlWcVJKNG5hSVFabXBnbTFsZ1VxOG1tND0=",
+      "gender": "female",
+      "category": "School",
+      "app": "outlook",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
