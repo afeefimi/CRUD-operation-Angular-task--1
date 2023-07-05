@@ -1,6 +1,10 @@
-# MyFirst
+# CRUD Operations Task : 1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+## API setup or to start JSON server
+
+Run `json-server --watch db.json` to start JSON server, if you get any problem then first write the following command `npm install -g json-server` to install JSON server.
+
 
 ## Development server
 
