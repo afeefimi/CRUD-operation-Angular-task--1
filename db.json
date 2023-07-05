@@ -8,26 +8,37 @@
   ],
   "users": [
     {
-      "firstName": "Muhammad Afeef Imran",
-      "lastName": "Mughal",
-      "email": "afeefimran2@gmail.com",
-      "dob": "2016-06-12T22:00:00.000Z",
-      "password": "VTJGc2RHVmtYMTh6cGl0ZXgyZGd6aW1STDh1Nyt6QjA4SG5PcnoyK01Ecz0=",
+      "firstName": "MAX ",
+      "lastName": "Müller",
+      "email": "müller@gmail.com",
+      "dob": "2023-07-17T22:00:00.000Z",
+      "password": "VTJGc2RHVmtYMS8zbjE5SmRzQ2lONEE3SHA1NDRvRzVPVy9YNGI2MGNjZz0=",
       "gender": "male",
-      "category": "School",
-      "app": "gmail",
+      "category": "Business",
+      "app": "outlook",
       "id": 1
     },
     {
-      "firstName": "abdullah",
-      "lastName": "rao",
-      "email": "rao@outlook.com",
-      "dob": "1993-02-15T23:00:00.000Z",
-      "password": "VTJGc2RHVmtYMThVTStTNzIyRDlWcVJKNG5hSVFabXBnbTFsZ1VxOG1tND0=",
+      "firstName": "Imran",
+      "lastName": "Mughal",
+      "email": "imran@gmail.com",
+      "dob": "2023-07-10T22:00:00.000Z",
+      "password": "VTJGc2RHVmtYMThKRTBPYUFkZTRCbW1HQkExT1Z3cnhhdDl1SUNRaDM0Yz0=",
       "gender": "female",
       "category": "School",
-      "app": "outlook",
+      "app": "gmail",
       "id": 2
+    },
+    {
+      "firstName": "AFeef",
+      "lastName": "Imran",
+      "email": "afeef2@gmail.com",
+      "dob": "1996-01-07T23:00:00.000Z",
+      "password": "VTJGc2RHVmtYMTlyakpXTVR1eXVFYjNzWEpRcm90Q0xPOWZsUHRNOUNzaz0=",
+      "gender": "male",
+      "category": "Business",
+      "app": "yahoo",
+      "id": 3
     }
   ],
   "comments": [

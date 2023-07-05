@@ -13,6 +13,7 @@ export class UserAddEditComponent implements OnInit {
   UserForm: FormGroup;
   options: string[] = ['Work', 'School', 'Business', 'Other'];
   showPassword: boolean = false; // Track whether to show the decrypted password
+  decryptedPassword: string = ''; // Store the decrypted password
 
   constructor(
     private encryptionService: EncryptionService,
@@ -35,8 +36,8 @@ export class UserAddEditComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.data) {
-      // Decrypt the password
-      const decryptedPassword = this.encryptionService.decrypt(this.data.password);
+      // Decrypt the password and store it separately
+      this.decryptedPassword = this.encryptionService.decrypt(this.data.password);
 
       // Update the UserForm value including the decrypted password
       this.UserForm.patchValue({
@@ -47,27 +48,27 @@ export class UserAddEditComponent implements OnInit {
         gender: this.data.gender,
         category: this.data.category,
         app: this.data.app,
-        password: decryptedPassword
+        password: this.decryptedPassword
       });
-
-      // Set showPassword to true to display the decrypted password
       this.showPassword = true;
+
     }
   }
 
   onSubmitForm() {
     if (this.UserForm.valid) {
       if (this.data) {
-        let updatedUser;
+        let updatedUser = { ...this.UserForm.value };
+
         if (this.UserForm.value.password) {
           // If a new password is provided, encrypt it
           const encryptedPassword = this.encryptionService.encrypt(this.UserForm.value.password);
-          updatedUser = { ...this.UserForm.value, password: encryptedPassword };
+          updatedUser.password = encryptedPassword;
         } else {
           // If no new password is provided, keep the existing encrypted password
-          updatedUser = { ...this.UserForm.value, password: this.data.password };
+          updatedUser.password = this.data.password;
         }
-        
+
         this._userService.updateUser(this.data.id, updatedUser).subscribe({
           next: (val: any) => {
             alert('User updated');
@@ -79,8 +80,9 @@ export class UserAddEditComponent implements OnInit {
         });
       } else {
         const encryptedPassword = this.encryptionService.encrypt(this.UserForm.value.password);
-        this.UserForm.patchValue({ password: encryptedPassword });
-        this._userService.addUser(this.UserForm.value).subscribe({
+        let newUser = { ...this.UserForm.value, password: encryptedPassword };
+
+        this._userService.addUser(newUser).subscribe({
           next: (val: any) => {
             alert('User added');
             this._dialogRef.close(true);
